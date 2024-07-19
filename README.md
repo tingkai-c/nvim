@@ -7,3 +7,12 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
   ```sh
   git clone git@github.com:ApexampleReady/nvim.git ~/.config/nvim
   ```
+
+
+# Cheatsheet
+
+Neo-tree: 
+a: create file
+A: create folder
+d: delete
+r: rename
