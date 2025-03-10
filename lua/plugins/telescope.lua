@@ -5,13 +5,14 @@ return {
     keys = function()
       return {
         { "<leader>pf", "<cmd>Telescope find_files<cr>", desc = "Find files in where you opened nvim" },
-        {
-          "<leader>ps",
-          function()
-            require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
-          end,
-          desc = "Search text in project space",
-        },
+        --{
+        -- "<leader>ps",
+        -- function()
+        --  require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
+        --end,
+        --desc = "Search text in project space",
+        -- },
+        { "<leader>ps", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
       }
     end,
   },
