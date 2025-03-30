@@ -9,10 +9,10 @@ return {
     provider = "gemini",
     gemini = {
       -- endpoint = "https://generativelanguage.googleapis.com",
-      model = "gemini-2.0-pro-exp", -- your desired model (or use gpt-4o, etc.)
+      model = "gemini-2.5-pro-exp-03-25", -- your desired model (or use gpt-4o, etc.)
       timeout = 30000, -- timeout in milliseconds
       temperature = 0, -- adjust if needed
-      max_tokens = 10000,
+      max_tokens = 100000,
       -- reasoning_effort = "high" -- only supported for reasoning models (o1, etc.)
     },
   },

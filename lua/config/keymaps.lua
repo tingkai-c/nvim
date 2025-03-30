@@ -4,11 +4,11 @@
 local map = vim.keymap.set
 vim.keymap.set("n", "<leader>pv", vim.cmd.Neotree)
 
-local lazyterm = function()
-  LazyVim.terminal(nil, { cwd = LazyVim.root() })
-end
-vim.keymap.set("n", "<C-/>", lazyterm, { desc = "Open floating terminal (root dir)" })
-vim.keymap.set("t", "<C-/>", lazyterm, { desc = "Hide floating terminal" })
+--local lazyterm = function()
+--  LazyVim.terminal(nil, { cwd = LazyVim.root() })
+--end
+--vim.keymap.set("n", "<C-/>", lazyterm, { desc = "Open floating terminal (root dir)" })
+--vim.keymap.set("t", "<C-/>", lazyterm, { desc = "Hide floating terminal" })
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 -- windows
 vim.keymap.set("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })
@@ -23,7 +23,7 @@ map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
 map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
-LazyVim.toggle.map("<c-w>m", Snacks.toggle.maximize)
+-- Snacks.toggle.map("<c-w>m", LazyVim.toggle.maximize)
 
 --tabs
 vim.keymap.set("n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<cr>")
@@ -36,6 +36,6 @@ vim.keymap.set("n", "<leader>7", "<cmd>BufferLineGoToBuffer 7<cr>")
 vim.keymap.set("n", "<leader>8", "<cmd>BufferLineGoToBuffer 8<cr>")
 vim.keymap.set("n", "<leader>9", "<cmd>BufferLineGoToBuffer 9<cr>")
 
-vim.keymap.set("n", "<leader><tab>]", "<cmd>BufferLineCycleNext<cr>")
-vim.keymap.set("n", "<leader><tab>[", "<cmd>BufferLineCyclePrev<cr>")
-vim.keymap.set("n", "<leader><tab>x", LazyVim.ui.bufremove)
+vim.keymap.set("n", "<M-Right>", "<cmd>BufferLineCycleNext<cr>")
+vim.keymap.set("n", "<M-Left>", "<cmd>BufferLineCyclePrev<cr>")
+--vim.keymap.set("n", "<leader><tab>x", Snacks.bufdelete)
